@@ -19,24 +19,25 @@ int main(){
 		if(op==1){
 			printf("\n*****************\n");
 			printf("Expediente del alumno\n");
-			scanf("%d", &alumnos[*des+con].expediente);
+			scanf("%d", &alumnos[*des].expediente);
 			while ((getchar()) != '\n');
 			printf("Nombre del alumno\n");
-			scanf("%c", &alumnos[*des+con].nombre);
+			scanf("%c", &alumnos[*des].nombre);
 			while ((getchar()) !='\n');
 			printf("Carrera del alumno\n");
-			scanf("%d", &alumnos[*des+con].carrera);
+			scanf("%d", &alumnos[*des].carrera);
 			while ((getchar()) !='\n');
 			printf("Edad del alumno\n");
-			scanf("%d", &alumnos[*des+con].edad);
+			scanf("%d", &alumnos[*des].edad);
 			while ((getchar()) !='\n');
 			printf("\n*****************\n");
 			if(con!=20){
+				*des++;
 				con++;
 			}
 		}
 		else if(op==2){
-			for (i=0; i<20; i++){
+			for (i=0; i<con; i++){
 				printf("\n*****************\n");
 				printf("Expediente del alumno: %d\n", alumnos[i].expediente);
 				printf("Nombre del alumno: %c\n", alumnos[i].nombre);
